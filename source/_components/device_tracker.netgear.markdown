@@ -25,10 +25,11 @@ device_tracker:
 ```
 
 {% configuration %}
-url:
+*url:
   description: The base URL, e.g., `http://routerlogin.com:5000` for example. If not provided `host` and `port` are used. If none provided autodetection of the URL will be used.
   required: false
   type: string
+*Since 0.88 using url: will cause a log warning "WARNING (MainThread) [homeassistant.helpers.config_validation] Your configuration contains extra keys that the platform does not support. Please remove [url]. (See /config/configuration.yaml, line xx).".  Use host: instead
 host:
   description: The IP address of your router, e.g., `192.168.1.1`.
   required: false
